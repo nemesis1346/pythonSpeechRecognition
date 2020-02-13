@@ -9,12 +9,12 @@ from os import path
 
 start = time.process_time()
 
-# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.wav")
+AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.wav")
 # AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.mp3") #IS NOT SUPPORTED
 # AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.aiff")
 # AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.flac")
 
-AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "chinese.wav")
+# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "chinese.wav")
 
 
 # use the audio file as the audio source
@@ -25,21 +25,21 @@ with sr.AudioFile(AUDIO_FILE) as source:
 print('PASSED FIRST LINES')
 # print(audio.__dict__)
 
-# recognize speech using Sphinx in ENGLISH
-# try:
-#     print("Sphinx thinks you said " + r.recognize_sphinx(audio))
-# except sr.UnknownValueError:
-#     print("Sphinx could not understand audio")
-# except sr.RequestError as e:
-#     print("Sphinx error; {0}".format(e))
-
-# recognize speech using Sphinx in CHINESE
+#recognize speech using Sphinx in ENGLISH
 try:
-    print("Sphinx thinks you said " + r.recognize_sphinx(audio, language="zh-CN"))
+    print("Sphinx thinks you said " + r.recognize_sphinx(audio))
 except sr.UnknownValueError:
     print("Sphinx could not understand audio")
 except sr.RequestError as e:
     print("Sphinx error; {0}".format(e))
+
+# recognize speech using Sphinx in CHINESE
+# try:
+#     print("Sphinx thinks you said " + r.recognize_sphinx(audio, language="zh-CN"))
+# except sr.UnknownValueError:
+#     print("Sphinx could not understand audio")
+# except sr.RequestError as e:
+#     print("Sphinx error; {0}".format(e))
     
 
 # # recognize speech using Google Speech Recognition
