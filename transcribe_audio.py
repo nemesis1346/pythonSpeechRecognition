@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 
 import speech_recognition as sr
+import time
 
 # obtain path to "english.wav" in the same folder as this script
 from os import path
+
+
+start = time.process_time()
+
 # AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.wav")
 # AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.mp3") #IS NOT SUPPORTED
 # AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.aiff")
@@ -103,3 +108,6 @@ except sr.RequestError as e:
 #     print("IBM Speech to Text could not understand audio")
 # except sr.RequestError as e:
 #     print("Could not request results from IBM Speech to Text service; {0}".format(e))
+
+# your code here    
+print(time.process_time() - start)
