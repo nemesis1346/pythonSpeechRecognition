@@ -1,7 +1,10 @@
 import { ReactMic } from 'react-mic';
 import React from 'react';
 import { save } from 'save-file'
- 
+// import fs from 'fs'
+var fs = require('browserify-fs');
+const write = require('write');
+
 
 class ReactMicCustomPage extends React.Component {
   constructor(props) {
@@ -34,12 +37,25 @@ class ReactMicCustomPage extends React.Component {
   }
 
   async onStop(recordedBlob) {
-    console.log('recordedBlob is: ', recordedBlob);
+    console.log('recordedBlob is: ', recordedBlob.blob);
     // const saveSync = require('save-file/sync')
     // await saveSync(recordedBlob, 'example2.wav')
-    await save(recordedBlob, 'example.mp3')
+    await save(recordedBlob.blob, "/home/lenovo/Documents/projects/python_speech_scripts/react_mic/example.wav")
+//     var blobUrl = URL.createObjectURL(recordedBlob.blob);
+// console.log(blobUrl)
 
+    // console.log(fs);
+    // fs.writeFile("test.wav", recordedBlob.blob, function(err) {
+    //   if(err) {
+    //     console.log("err", err);
+    //   } else {
+    //     console.log('success')
+    //   }
+    // }); 
 
+    // fs.writeFile('/home/lenovo/Documents/projects/python_speech_scripts/react_mic/example.wav', recordedBlob.blob, function() {
+     
+    // });
   }
 
   render() {
