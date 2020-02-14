@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import ReactMicPage from './components/pages/react_mic.js'
+import ReactMicCustomPage from './components/pages/react_mic_custom.js'
+import { BrowserRouter ,Route} from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Route path="/" exact component={ReactMicPage}></Route>
+      <Route path="/" exact component={ReactMicCustomPage}></Route>
     </div>
   </BrowserRouter>
   );

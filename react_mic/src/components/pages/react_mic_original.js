@@ -1,25 +1,19 @@
 import { ReactMic } from 'react-mic';
-import React from 'react';
 
-class ReactMicPage extends React.Component {
+class ReactMicOriginalPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       record: false
     }
-
   }
 
   startRecording = () => {
-    this.setState({
-      record: true
-    });
+    this.setState({ record: true });
   }
 
   stopRecording = () => {
-    this.setState({
-      record: false
-    });
+    this.setState({ record: false });
   }
 
   onData(recordedBlob) {
@@ -46,4 +40,5 @@ class ReactMicPage extends React.Component {
     );
   }
 }
-export default ReactMicPage;
+
+export default ReactMicOriginalPage;
