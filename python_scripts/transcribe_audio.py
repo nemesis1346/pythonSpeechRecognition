@@ -9,12 +9,12 @@ from os import path
 
 start = time.process_time()
 
-AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.wav")
-# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.mp3") #IS NOT SUPPORTED
-# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.aiff")
-# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.flac")
+AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "audio_files/english.wav")
+# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "audio_files/english.mp3") #IS NOT SUPPORTED
+# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "audio_files/english.aiff")
+# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "audio_files/english.flac")
 
-# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "chinese.wav")
+# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "audio_files/chinese.wav")
 
 
 # use the audio file as the audio source
