@@ -1,11 +1,11 @@
 "use strict";
 //Imports
 const port = 8889;
+const multer  = require('multer')
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const VocabularyFirepoint = require("../endpoints/vocabularyFirepoint.js");
-const FilesFirepoint = require("../endpoints/filesFirepoint.js");
+const FilesFirepoint = require("../endpoints/filesEndpoint.js");
 const app = express();
 const DataModel = require("../models/dataModel.js");
 const fileUpload = require("express-fileupload");
@@ -118,7 +118,6 @@ const handlerFiles = async (request, response) => {
   await this.filesFirepoint.processingFiles(eafFile, mp3File);
   response.send("hello");
 };
-app.post("/getObjectsByQuery", handlerDefault);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -126,9 +125,7 @@ app.use(cors());
 app.use(fileUpload());
 
 app.post("/login", handlerDefault);
-app.post("/saveObject", handlerDefault);
 app.get("/getAllObjects", handlerDefault);
-app.post("/createUser", handlerDefault);
 app.post("/getObject", handlerDefault);
 app.post("/streamTrack", handlerDefault);
 app.post("/uploadFiles", handlerFiles);
@@ -139,7 +136,6 @@ app.listen(port, async err => {
   }
   try {
     //Instance of the network and transactions
-    this.vocabularyFirepoint = new VocabularyFirepoint();
     this.filesFirepoint = new FilesFirepoint();
   } catch (error) {
     console.log("Error Composer instance: ", error);
