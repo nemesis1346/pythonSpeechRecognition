@@ -113,11 +113,23 @@ const handlerDefault = async (request, response) => {
 };
 
 const handlerFiles = async (request, response) => {
-  // let eafFile = request.files.eafFile;
-  // let mp3File = request.files.mp3File;
-  // await this.filesFirepoint.processingFiles(eafFile, mp3File);
-  console.log(request)
-  response.send("hello");
+  let dataModel = new DataModel(null, null, null);
+  try{
+    let files = request.files;
+    await this.filesFirepoint.processingFiles(files);
+
+  }catch(err){
+    dataModel.message = error.message.toString();
+    dataModel.status = "500";
+    let body = JSON.stringify(dataModel);
+    console.log("ERROR 500:");
+    console.log(error);
+    const responseBody = { headers, method, url, body };
+
+    response.statusCode = 500;
+    response.write(JSON.stringify(responseBody));
+    response.end();
+  }
 };
 
 app.use(bodyParser.json());

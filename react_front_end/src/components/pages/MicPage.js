@@ -57,7 +57,9 @@ class MicPage extends React.Component {
 
     const data = new FormData();
 
-    data.append('wavFile', blobData, 'wavFile.wav');
+    // data.append('wavFile', blobData, 'wavFile.wav');
+    data.append('wavFile', blobData);
+
     console.log(data)
     this.props.uploadBlobAction(data);
 
