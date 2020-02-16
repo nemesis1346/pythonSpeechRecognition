@@ -1,12 +1,10 @@
 "use strict";
-const ObjectModel = require("../models/objectModel.js");
 const DataModel = require("../models/dataModel.js");
 
 //This must be deleted
 class VocabularyFirepoint {
   constructor() {
-    this.database = firebase.database();
-    this.storage = firebase.storage();
+
   }
 
   /**

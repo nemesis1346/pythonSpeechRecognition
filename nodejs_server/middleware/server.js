@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const FilesFirepoint = require("../endpoints/filesEndpoint.js");
 const app = express();
-const DataModel = require("../models/dataModel.js");
+const DataModel = require("../models/dataModel");
 const fileUpload = require("express-fileupload");
 
 const handlerDefault = async (request, response) => {
@@ -113,9 +113,10 @@ const handlerDefault = async (request, response) => {
 };
 
 const handlerFiles = async (request, response) => {
-  let eafFile = request.files.eafFile;
-  let mp3File = request.files.mp3File;
-  await this.filesFirepoint.processingFiles(eafFile, mp3File);
+  // let eafFile = request.files.eafFile;
+  // let mp3File = request.files.mp3File;
+  // await this.filesFirepoint.processingFiles(eafFile, mp3File);
+  console.log(request)
   response.send("hello");
 };
 
