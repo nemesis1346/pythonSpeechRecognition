@@ -2,7 +2,7 @@
 
 const Sequelize = require('sequelize');
 
-module.exports = sequelize.define('Speech', {
+module.exports = sequelize.define('speech', {
     id: {
         type: Sequelize.INTEGER(11),
         allowNull: false,
@@ -21,6 +21,7 @@ module.exports = sequelize.define('Speech', {
       },
       userId: Sequelize.INTEGER(11),
       createdAt: Sequelize.DATE,
-      updatedAt: Sequelize.DATE
+      updatedAt: Sequelize.DATE,
+      
 });
 

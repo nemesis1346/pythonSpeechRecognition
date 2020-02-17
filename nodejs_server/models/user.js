@@ -1,12 +1,14 @@
 'use strict';
-module.exports = sequelize.define('User', {
+const Sequelize = require('sequelize');
+
+module.exports = sequelize.define('user', {
   id: {
     type: Sequelize.INTEGER(11),
     allowNull: false,
     autoIncrement: true,
     primaryKey: true
   },
-  usename: {
+  username: {
     type: Sequelize.STRING(300),
     allowNull: false,
     unique: true
@@ -16,5 +18,6 @@ module.exports = sequelize.define('User', {
     allowNull: false
   },
   createdAt: Sequelize.DATE,
-  updatedAt: Sequelize.DATE
+  updatedAt: Sequelize.DATE,
+  
 }, {});
