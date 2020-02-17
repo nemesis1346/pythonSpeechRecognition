@@ -1,13 +1,23 @@
-class DataModel {
-    constructor(
-        status,
-        data,
-        message
-    ) {
-        this.status = status;
-        this.data = data;
-        this.message=message;
-    }
-}
+const Sequelize = require('sequelize');
+const Model = Sequelize.Model;
 
-module.exports = DataModel;
+class SpeechFile extends Model{}
+
+SpeechFile.init({
+    // attributes
+    uui:{
+        primaryKey: true,
+        type: Sequelize.UUID
+    },
+    transcribed: {
+      type: Sequelize.BOOLEAN,  
+      defaultValue: false
+    },
+  }, {
+    sequelize,
+    modelName: 'speechFile'
+    // options
+  });
+
+
+module.exports = SpeechFile;

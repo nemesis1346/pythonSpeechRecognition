@@ -7,7 +7,7 @@ const Sequelize = require('sequelize');
 class DatabaseApi {
     constructor() {
         console.log('DATABASE API INSTANCE')
-        console.log(process.env.RDS_DB_NAME);
+        console.log(process.env.DB_NAME);
         const sequelize = new Sequelize(
             process.env.DB_NAME, 
             process.env.DB_USERNAME, 
