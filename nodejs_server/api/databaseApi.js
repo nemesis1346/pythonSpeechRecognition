@@ -33,8 +33,8 @@ class DatabaseApi {
         console.log(speechObject);
         try {
             await Speech.create({ 
-                uuid: userObject.uuid,
-                userId: userObject.username, 
+                uuid: speechObject.uuid,
+                userId: speechObject.username, 
              });
 
         } catch (error) {
