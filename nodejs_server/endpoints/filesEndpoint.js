@@ -3,7 +3,7 @@ const DataModel = require("../models/dataModel.js");
 const fs = require('fs');
 
 //This must be deleted
-class VocabularyFirepoint {
+class FilesEndpoint {
   constructor() {
 
   }
@@ -57,4 +57,4 @@ class VocabularyFirepoint {
   }
 
 }
-module.exports = VocabularyFirepoint;
+module.exports = FilesEndpoint;

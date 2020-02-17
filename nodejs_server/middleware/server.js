@@ -9,6 +9,10 @@ const FilesFirepoint = require("../endpoints/filesEndpoint.js");
 const app = express();
 const DataModel = require("../models/dataModel");
 const fileUpload = require("express-fileupload");
+const databaseApi = require('../api/databaseApi');
+// require('dotenv').config({ path: '../.env' })
+require('dotenv').config({ path: '../.env.production' }) // for other environments
+
 
 const handlerDefault = async (request, response) => {
   const { headers, method, url } = request;
@@ -150,6 +154,7 @@ app.listen(port, async err => {
   try {
     //Instance of the network and transactions
     this.filesFirepoint = new FilesFirepoint();
+    this.databaseApi = new databaseApi();
   } catch (error) {
     console.log("Error Composer instance: ", error);
   }
