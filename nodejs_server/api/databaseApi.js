@@ -1,20 +1,20 @@
 "use strict";
 const DataModel = require("../models/dataModel.js");
 const fs = require('fs');
-const Sequelize = require('sequelize');
+// const Sequelize = require('sequelize');
 
 //This must be deleted
 class DatabaseApi {
     constructor() {
         console.log('DATABASE API INSTANCE')
-        console.log(process.env.DB_NAME);
-        const sequelize = new Sequelize(
-            process.env.DB_NAME, 
-            process.env.DB_USERNAME, 
-            process.env.DB_PASSWORD, {
-            host: process.env.DB_HOSTNAME,
-            dialect:process.env.DB_ENGINE
-          });
+        console.log(process.env.DB_ENGINE);
+        // const sequelize = new Sequelize(
+        //     process.env.DB_NAME,
+        //     process.env.DB_USERNAME,
+        //     process.env.DB_PASSWORD, {
+        //     host: process.env.DB_HOSTNAME,
+        //     dialect: process.env.DB_ENGINE
+        // });
     }
 
     async init() { }
@@ -32,7 +32,7 @@ class DatabaseApi {
 
         try {
 
-           
+
         } catch (error) {
             console.error(error);
             throw new Error(error);

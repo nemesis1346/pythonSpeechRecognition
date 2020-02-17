@@ -1,6 +1,7 @@
 "use strict";
 const DataModel = require("../models/dataModel.js");
 const fs = require('fs');
+const UUID = require('uuid/v1');
 
 //This must be deleted
 class FilesEndpoint {
@@ -41,8 +42,9 @@ class FilesEndpoint {
     console.log("************************************");
     console.log("Request Processing Files in FilesEndpoint: ");
     console.log(files);
+    let uuid = UUID();
     try {
-      fs.writeFile('../test.wav', files.wavFile.data, (err) => {
+      fs.writeFile('../../audio_files/'+uuid+".wav", files.wavFile.data, (err) => {
         if (err) {
           console.log('Error: ', err);
         } else {

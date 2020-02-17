@@ -13,7 +13,7 @@ const databaseApi = require('../api/databaseApi');
 
 // require('dotenv').config({ path: '../.env' })
 require('dotenv').config({ path: '../.env.production' }) // for other environments
-
+require('../api/connection');
 
 const handlerDefault = async (request, response) => {
   const { headers, method, url } = request;
