@@ -1,0 +1,10 @@
+.transcript-card{
+    margin-top: 5% !important;
+}
+.transcript-icons{
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin-right: 1%;
+    margin-bottom: 1%;
+}

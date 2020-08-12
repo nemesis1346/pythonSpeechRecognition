@@ -1,0 +1,86 @@
+.room-transcription-container{
+    margin-top:3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+    text-align: center;
+    color: white;
+    background-color: white;
+}
+ 
+.message-no-spinner{
+    color:black;
+}
+
+.default-textarea{
+    resize: none;
+    color: white;
+    white-space: normal;
+    text-align: justify;
+    -moz-text-align-last: center; 
+    text-align-last: center;
+    font-size: 0.8em;
+    border: none;
+    margin-top:0.3%;
+    margin-left: 0.3%;
+    margin-right: 0.3%;
+    margin-bottom: 5%;
+    padding-bottom: 0.4%;
+
+}
+.error-server-message{
+    color:black;
+
+}
+.speechurl-button{
+    margin-left: 1%;
+}
+
+.card .card-content {
+    padding: 1%;
+    border-radius: 0 0 1px 1px;
+
+}
+
+.spinner-transcriptions{
+    color:black;
+}
+.card {
+    margin: 1px;
+}
+
+.row {
+    margin-bottom: 2px;
+    position: relative;
+}
+.transcript-icons{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+.comment_date{
+	font-family:monospace, Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New";
+	color:#CCC;
+	position: absolute;
+    bottom: 2%;
+    font-size: 0.6em;
+    right: 2%;
+    margin-right: 20%;
+}
+.card-container-mic-page {
+    background-color: #1565c0 !important;
+}
+
+.card-container-mic-page:hover {
+    background-color: #003c8f !important;
+}
+.option-language-selection{
+    color: black;
+    margin-bottom: 2%;
+    height: 30px;
+}
+.language-selected-container{
+    color: black;
+    margin-bottom: 2%;
+}

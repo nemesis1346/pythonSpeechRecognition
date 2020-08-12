@@ -1,3 +1,10 @@
 .vscode
+.vscode-root
 ~
 audio_files/*
+testing_audio_files
+text_files/*
+node_modules/
+package-lock.json
+
+react_front_end/storybook

@@ -1,0 +1,15 @@
+[Unit]
+Description=DDMIC
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+#User=www-data
+#Group=www-data
+Type=simple
+WorkingDirectory=/home/apps/speech/nodejs_server/middleware
+ExecStart=/usr/local/bin/node /home/apps/speech/nodejs_server/middleware/server.js
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target

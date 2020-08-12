@@ -1,0 +1,43 @@
+.mic-experimental-page-container {
+    background-color: #f3f6f9;
+    width: 100%;
+}
+
+.mic-experimental-page-buttons {
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    background-color: #f3f6f9;
+    color: #06172a;
+    padding-left: 2%;
+    padding-right: 0%;
+    background: none;
+    border: none;
+    height: 28px;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.mic-experimental-page-buttons:hover {
+    box-shadow: 1px 6px 15px rgba(0, 0, 0, 0);
+}
+
+.waves-effect.waves-brown .waves-ripple {
+    background-color: rgba(121, 85, 72, 0.65);
+}
+
+.react-mic {
+    display: none;
+    justify-content: 'center';
+    align-items: 'center';
+}
+
+.mic-experimental-container {
+    background-color: #f3f6f9;
+    width: 100%;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+
+.record-button {
+    background-color: red;
+}

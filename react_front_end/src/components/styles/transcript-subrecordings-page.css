@@ -1,0 +1,12 @@
+.transcript-subrecordings-page-container {
+    margin-top: 3%;
+    text-align: center;
+}
+
+.transcript-card {
+    background-color: #1565c0;
+}
+
+.transcript-card:hover {
+    background-color: #003c8f;
+}

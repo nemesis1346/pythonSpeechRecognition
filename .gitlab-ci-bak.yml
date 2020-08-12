@@ -1,0 +1,47 @@
+include:
+    - project: 'sysadmin/hosts-management'
+      ref: master
+      file: '/templates/.dadesktop-nodes-template.yml'
+  
+  variables:
+    SCRIPT: sudo bash ./.gitlab-ci.sh
+  
+  stages:
+    - package
+    - deploy
+  
+  package:
+    stage: package
+    script: 
+          - tar zcf nodejs_server.tar.gz nodejs_server
+    artifacts:
+      name: "$CI_PROJECT_NAME"
+      when: on_success
+      expire_in: 1440 mins
+      paths:
+          - react_front_end/build.tgz
+          - nodejs_server/node_modules.tar.gz
+          - nodejs_server.tar.gz
+          - .gitlab-ci.sh
+          - speech.service
+          - speech_conversion.service
+          - speech.inc
+          - install_mariadb.sh
+          - check-cronjob.sh
+    only:
+      - master
+    tags:
+      - gitlab-runner-de
+  
+  deply_test:
+    stage: deploy
+    variables:
+      GIT_STRATEGY: none
+    script: $SCRIPT
+    only:
+      - master
+    except:
+      - triggers
+    tags:
+      - nu12de.npg.io
+  
