@@ -12,7 +12,7 @@ npm run-script build
 cd nodejs_server
 npm install
 
-## Develop
+### Develop
 cd nodejs_server
 node server.js
 
@@ -21,23 +21,19 @@ cd react_front_end and do:
 yarn start
 
 
-### Consider that the url of the assets in the public build must have first the namespace of the proxy apache configuration. Something like the following:
-<pre>
-<link rel="manifest" href="/microphone/manifest.json" />
-</pre>
-
-
-# install npm, will also install nodejs, location of node is /usr/bin/node
+### Install npm, will also install nodejs, location of node is /usr/bin/node
 sudo apt install -y npm
 
-# n - change version of node, this command will also change location of node to /usr/local/bin/node
+### Node version control
+change version of node, this command will also change location of node to /usr/local/bin/node
+
 sudo npm -g install n
 sudo n 12.16.3
 
-# IBM watson
+### IBM watson
 curl -X POST -u "apikey:qCI_uusSTXyqAuw73qVhV1DDoMJgJBCgIdIux3S9ldJx" --header "Content-Type: audio/wav" --data-binary @final2_piece001.wav https://api.jp-tok.speech-to-text.watson.cloud.ibm.com/instances/f8cab30e-1f1a-4a2b-8f87-5482d079a97d/v1/recognize
 
-### PRODUCTION SERVERS
+### Production Servers
 
 -zh10cn.npg.io -p 2210
 
@@ -57,7 +53,7 @@ curl -X POST -u "apikey:qCI_uusSTXyqAuw73qVhV1DDoMJgJBCgIdIux3S9ldJx" --header "
 
 -wa8pl.npg.io
 
-### DEV SERVERS TO DEPLOY
+### Dev Servers to Deploy
 
 -fl1us.npg.io
 
